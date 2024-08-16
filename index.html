@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="back" id="back">
+    <!-- Code for the To-do list. -->
+    <div class="todo">
+        <h2>To-do List</h2>
+        <div class="top">
+            <input type="text" id="text-box" placeholder="Enter text here">
+            <button onclick="addItem()">+</button>
+        </div>
+        <ul id="items"></ul>
+        <div class="switch">
+            <button id="dark">Dark</button>
+        </div>
+    </div>
+    <!-- Code for the instructions. -->
+    <div class="rules">
+        <h2>How to use:</h2>
+        <ul class="the-rules">
+            <li>Type within 'Enter text here' field.</li>
+            <li>Press 'enter' or click the '+' button to add item.</li>
+            <li>Left-click item to toggle its completion.</li>
+            <li>Right-click item to delete from list.</li>
+        </ul>
+    </div>
+
+</div>
+    <script src ="script.js"></script>
+</body>
+</html>
