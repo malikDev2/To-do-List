@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+.back{
+    align-content: space-between;
+    background: radial-gradient(circle, rgb(255, 100, 134), rgba(255, 255, 255, 0.74));
+    min-height: 100vh;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.todo{
+    background: rgba(255, 255, 255, 0.178);
+    border-radius: 20px;
+    margin: 100px auto 30px;
+    max-width: 550px;
+    padding: 40px 30px 40px;
+    transform: translate(-300px);
+}
+
+/* Media tags to keep to-do list in frame.*/
+@media (max-width: 1200px){
+    .todo{
+        transform: translateX(-90px);
+    }
+}
+@media (max-width: 1066px){
+    .todo{
+        transform: translateX(-50px);
+    }
+    
+}
+@media (max-width: 866px){
+    .todo{
+        transform: translateX(0);
+    }
+}
+
+h2{
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.top{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+input{
+    background: rgba(255, 255, 255, 0.137);
+    border: none;
+    border-radius: 30px;
+    padding: 16px;
+    width: 400px;
+}
+input:hover{
+    border-color: var(--input-hover-bc);
+    border-style:double;
+}
+.top button{
+    background: rgba(255, 255, 255, 0.137);
+    border: none;
+    border-radius: 100%;
+    font-weight: 1000;
+    padding: 16px 20px;
+}
+.top button:hover{
+    background: rgba(243, 93, 125, 0.267);
+}
+
+li:hover{
+    background: rgba(255, 255, 255, 0.089);
+    border-radius: 10px;
+}
+.todo li{
+    list-style: circle;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.switch{
+    display: flex;
+    justify-content: right;
+}
+.switch button{
+    background: rgba(255, 255, 255, 0.137);
+    border: none;
+    border-radius: 20px;
+    height: 35px;
+    margin-right: 50px;
+    margin-top: 30px;
+    width: 60px;
+}
+.switch button:hover{
+    background: var(--switch-button-hover-bg);
+}
+
+/* Styles for dark and light mode.*/
+.dark-mode {
+    --input-hover-bc: rgba(0, 0, 0, 0.178);
+    --switch-button-hover-bg: rgba(255, 218, 7, 0.486); 
+}
+.light-mode{
+    --input-hover-bc: rgba(255, 255, 255, 0.062);
+    --switch-button-hover-bg: rgba(233, 53, 188, 0.301);
+}
+
+.rules{
+    background: rgba(255, 255, 255, 0.301);
+    border-radius: 20px;
+    border-style:outset;
+    padding: 20px;
+    position: absolute;
+    right: 100px;
+    top: 130px;
+    width: 400px;
+}
+.rules:hover{
+    background: white;
+}
+.rules h2{
+    margin-top: 10px;
+}
+.the-rules{
+    font-weight: bold;
+    list-style: decimal;
+}
+
+/* Media tag to hide instructions when window is too small.*/
+@media (max-width: 1200px){
+    .rules{
+        display: none;
+    }
+}
+
